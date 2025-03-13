@@ -1,3 +1,55 @@
+-- Create Baltro Joker Searcher database
+CREATE DATABASE BalatroJokerSearch;
+GO
+
+-- Use Balatro Joker Search database
+USE BalatroJokerSearch;
+GO
+
+-- Create Jokers table
+CREATE TABLE Jokers (
+	JokerID	INT	PRIMARY KEY,
+	Name	NVARCHAR(30),
+	Description	NVARCHAR(150),
+	Cost	INT,
+	Rarity	NVARCHAR(20),
+	Ability	NVARCHAR(20)
+);
+GO
+
+-- Create search procedure
+CREATE PROC spSearchJokers
+	@NameContains	NVARCHAR(30),
+	@CostMin	INT,
+	@CostMax	INT,
+	@Rarity	NVARCHAR(20),
+	@Ability	NVARCHAR(20)
+AS
+BEGIN
+	SELECT *
+	FROM Jokers
+	WHERE
+		Name LIKE '%' + @NameContains + '%' AND
+		Cost >= @CostMin AND
+		Cost <= @CostMax AND
+		Rarity LIKE @Rarity + '%' AND
+		Ability LIKE '%' + @Ability AND
+		Ability LIKE @Ability + '%'
+END;
+GO
+
+-- Create get joker by ID procedure
+CREATE PROC spGetJokerByID
+	@JokerID	INT
+AS
+BEGIN
+	SELECT *
+	FROM Jokers
+	WHERE @JokerID = JokerID
+END
+GO
+
+-- Insert all joker values
 INSERT INTO Jokers (
 	JokerID,
 	Name,
@@ -157,3 +209,4 @@ INSERT INTO Jokers (
 	(148, 'Yorick', 'This Joker gains X1 Mult every 23 cards discarded', 20, 'Legendary', 'X Mult'),
 	(149, 'Zany Joker', '+12 Mult if played hand contains a Three of a Kind', 4, 'Common', '+ Mult')
 ;
+GO
