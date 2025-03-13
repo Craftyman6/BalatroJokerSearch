@@ -8,8 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
-using Dapper;
 using System.Data.SqlClient;
+using Dapper;
 using System.CodeDom;
 
 namespace BalatroJokerSearch
