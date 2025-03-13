@@ -4,6 +4,6 @@ This is a Windows Forms App used to filter, search for, and get info on the "Jok
 - A machine with Microsoft SQL Server installed and able to run scripts
 - Windows machine
 ## How to run
-First, a database must be created and initialized. In the root of the repository, run the InitializationScript.sql file on the master of your database. This will create a database named BalatroJokerSearch, table named Jokers, procedures, and insert all joker values.
-In the Executable folder of the repository, the BalatroJokerSearch.exe file can be run to start the program.
-The first window will prompt the user the provide a connection string to the database. A default one is provided for users hosting the database on their own machine. This can be changed to connect to any database with any parameters.
+<p>First, a database must be created and initialized. In the root of the repository, run the InitializationScript.sql file on the master of your database. This will create a database named BalatroJokerSearch, table named Jokers, procedures, and insert all joker values.</p>
+<p>In the Executable folder of the repository, the BalatroJokerSearch.exe file can be run to start the program.</p>
+<p>The first window will prompt the user the provide a connection string to the database. A default one is provided for users hosting the database on their own machine. This can be changed to connect to any database with any parameters.</p>
