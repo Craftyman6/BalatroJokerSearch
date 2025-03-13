@@ -1,0 +1,8 @@
+CREATE PROC spGetJokerByID
+	@JokerID	INT
+AS
+BEGIN
+	SELECT *
+	FROM Jokers
+	WHERE @JokerID = JokerID
+END
