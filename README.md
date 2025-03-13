@@ -1,5 +1,5 @@
 # Balatro Joker Searcher
-This is a Windows Forms App used to filter, search for, and get info on the "Jokers" from the hit game Balatro. The program uses Dapper to run SQL queries on a local or external database to obtain the data it needs. This is a project made to demonstrate understating in C#, .NET, SQL, and Dapper. 
+This is a Windows Forms App used to filter, search for, and get info on the "Jokers" from the hit game Balatro. The program runs SQL queries on a local or external database and uses Dapper to obtain the data it needs. This is a project made to demonstrate understating in C#, .NET, SQL, and Dapper. 
 ****
 ![An example of the Joker Searcher searching for jokers that are from 3 to 7 dollars, Uncommon, and give + mult to the player](./READMEImages/ExampleSearch.png)
 ## Needed to run
